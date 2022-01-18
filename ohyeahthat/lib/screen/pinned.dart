@@ -13,13 +13,20 @@ class PinnedScreen extends StatefulWidget{
 
 class _PinnedScreenState extends State<PinnedScreen> {
   List<Content> item = List.of(Data.contents);
-  int imp_count = 3;
-
-  
+  int imp_count = 0;
 
   @override
   Widget build(BuildContext context) {
+    imp_count = 0;
+    for(int i=0; i<item.length; i++){
+      if(item[i].imp == true){
+        imp_count++;
+      }
+    }
     return Scaffold(
+      appBar : AppBar(
+        title : const Text("중요공지"),
+      ),
       body: SafeArea(
         child: Center(
           child: ListView.separated(

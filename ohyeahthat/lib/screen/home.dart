@@ -20,6 +20,13 @@ class HomeScreen extends GetView<HomeController> {
               fontSize: 20,
             ),
           ),
+          actions : <Widget>[
+            IconButton(
+              icon : const Icon(Icons.push_pin),
+              onPressed: (){
+                Get.to(const PinnedScreen());
+              })
+          ],
           backgroundColor: primary,
         ),
         body: IndexedStack(

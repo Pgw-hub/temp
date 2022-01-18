@@ -36,9 +36,9 @@ class _Slidable_Imp_WidgetState extends State<Slidable_Imp_Widget> {
             icon: Icons.star_rounded,
             onTap: () {
               widget.onDismissed(SlidableAction.archive);
-              
               setState(() {
                 widget.selected_item.imp = false;
+                widget.count--;
               });
                 print('중요공지위젯확인 : ');
                 print(widget.count);

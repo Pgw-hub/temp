@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
       builder: () => GetMaterialApp(
         title: 'ohyeathat',
         debugShowCheckedModeBanner: false,
-        theme: ThemeData(
+        theme: ThemeData(           
           primaryColor: Colors.blue,
           backgroundColor: Colors.white,
         ),

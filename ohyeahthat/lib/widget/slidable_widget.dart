@@ -9,14 +9,12 @@ class SlidableWidget extends StatefulWidget {
   final Widget child;
   final Function(SlidableAction action) onDismissed;
   final Content selected_item;
-  int count;
 
 
   SlidableWidget({
     required this.child,
     required this.onDismissed,
     required this.selected_item,
-    required this.count,
     Key ? key,
   }) : super(key: key);
 
@@ -42,7 +40,6 @@ class _SlidableWidgetState extends State<SlidableWidget> {
               });
                 if(widget.selected_item.imp == true){
                   print('전체공지위젯확인 : ');
-                  print(widget.count);
                 }
               widget.onDismissed(SlidableAction.archive);
             }
